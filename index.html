@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+
+</head>
+<body>
+    <div class="form">
+        <h2>Faça sua inscrição</h2>
+
+        <form action="/enviar" method="post" class="style-form">
+            <div class="dadosPessoais">
+                <h3>Dados Pessoais: </h3>
+                <label for="fname">Nome:</label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname">Sobrenome:</label>
+                <input type="text" id="lname" name="lname" required>
+                <label for="femail">E-mail:</label>
+                <input type="email" id="femail" name="femail" required>
+                <label for="fdataNasc">Data Nascimento:</label>
+                <input type="date" id="fdataNasc" name="fdataNasc" required>
+                <label for="fone">Telefone:</label>
+                <input type="tel" id="fone" name="fone" placeholder="(47) 3333-1234">
+                <label for="flinkedin">Informe seu LinkedIn:</label>
+                <input type="url" id="flinkedin" name="flinkedin">
+                <label for="fsenha">Crie uma Senha:</label>
+                <input type="password" id="fsenha" name="fsenha" required>
+            </div>
+
+            <div class="endereco">
+                <h3>Preencha seu Endereço: </h3>
+                <label for="fcep">Cep:</label>
+                <input type="text" id="fcep" name="fcep" required onblur="buscarCep()"> 
+                <label for="fcidade">Cidade:</label>
+                <input type="text" id="fcidade" name="fcidade" required>
+                <label for="festado">Estado:</label>
+                <input type="text" id="festado" name="festado" required>
+                <label for="frua">Rua:</label>
+                <input type="text" id="frua" name="frua" required>
+                <label for="fendNumero">Número:</label>
+                <input type="text" id="fendNumero" name="fendNumero" required>
+                <label for="fap">Apartamento</label>
+                <input type="radio" id="fap" name="tipo" value="apartamento" required>
+                <label for="fcasa">Casa</label>
+                <input type="radio" id="fcasa" name="tipo" value="casa" required>
+            </div>
+
+            <div class="DadosdoCurso">
+                <h3>Escolha seu curso: </h3>
+                <label for="cursos">Curso:</label>
+                <input list="cursos" name="cursos">
+                <datalist id="cursos">
+                    <option value="Análise e Desenvolvimento de Sistemas">
+                    <option value="Ciências da Computação">
+                    <option value="Big Data">
+                </datalist>
+                <label for="fead">Presencial</label>
+                <input type="checkbox" id="fead" name="fead" required>
+            </div>
+
+            <div class="vestibular">
+                <h3>Escreva seu Texto que será usado como vestibular : </h3>
+                <textarea id="textarea" name="textarea" rows="4" cols="50">Escreva um texto sobre a Tecnologia e o mundo Atual com no mínimo 500 caracteres.
+                </textarea>
+            </div>
+
+            <input type="submit" value="Enviar" class="submit-btn">
+            <input type="reset" value="Limpar Dados">
+        </form>
+    </div>
+</body>
+</html>
